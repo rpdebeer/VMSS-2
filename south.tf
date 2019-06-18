@@ -278,7 +278,7 @@ resource "azurerm_monitor_autoscale_setting" "test2" {
     email {
       send_to_subscription_administrator    = true
       send_to_subscription_co_administrator = true
-      custom_emails                         = ["astrand@checkpoint.com"]
+      custom_emails                         = ["rutger-paul.debeer@atos.net"]
     }
   }
 }

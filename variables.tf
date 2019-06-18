@@ -28,7 +28,7 @@ variable "east_cidr" {
 
 # must match what was used in autoprov-cfg config
 variable "management" {
-  default = "management-server"
+  default = "management"
 }
 
 # must match what was used in autoprov-cfg config
@@ -38,15 +38,15 @@ variable "template" {
 
 # must match what was used in autoprov-cfg config
 variable "sickey" {
-  default = ""
+  default = "vpn12345"
 }
 
 variable "admin_password" {
-  default = ""
+  default = "Qwerty01!:-)"
 }
 
 variable "ssh_key" {
-  default = "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAL7KHpD"
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAv/m/wvvzL2nPa3RBvDcuXMVGghL4RQs/x1+XVUQo+YYWh2OGwQseqmxX7CTpA9l29rMsIN26WkJdfQs57B/haF/CDO6baHxPGxnHcYd74BrB3qY9RTgwM9tGKWk6EWbJSQpWpbIuphvMHRxB8FHsrfsXlaKde3cm/k77OmcOM/6JPfwbp5VtTbIIeR8iobDYTjamavtJ65uDgRKg2RFftNISfB8Ounk6u7fDRXtuFYBOyCLgkBX+oKDnmffe74eFHx/QB3t2vCLkrN3zcL92swnu83umo3SDwO92QAMt5Pif7AUZdAcpzYuBc5O3P9mPglefb9H3beoWyHCKAChFMw== rsa-key-20190611"
 }
 
 variable "envtags" {
@@ -87,14 +87,14 @@ variable "ubuntu_user_data" {
                       sleep 1
                     done
                     until curl \
-                      --output /var/www/html/CloudGuard.png \
-                      --url https://www.checkpoint.com/wp-content/uploads/cloudguard-hero-image.png ; do
+                      --output /var/www/html/Atos.png \
+                      --url https://atos.net/wp-content/uploads/2019/01/atos-logo-blue.png ; do
                        sleep 1
                     done
                     sudo chmod a+w /var/www/html/index.html 
                     echo "<html><head><meta http-equiv=refresh content="5" /> </head><body><center><H1>" > /var/www/html/index.html
                     echo $HOSTNAME >> /var/www/html/index.html
-                    echo "<BR><BR>Check Point CloudGuard VMSS Demo <BR><BR>Any Cloud, Any App, Unmatched Security<BR><BR>" >> /var/www/html/index.html
-                    echo "<img src=\"/CloudGuard.png\" height=\"25%\">" >> /var/www/html/index.html
+                    echo "<BR><BR>Check Point CloudGuard VMSS Demo <BR><BR>R.P. de Beer<BR><BR>rutger-paul.debeer@atos.net<BR><BR>" >> /var/www/html/index.html
+                    echo "<img src=\"/Atos.png \" height=\"25%\">" >> /var/www/html/index.html
                     EOF
 }
